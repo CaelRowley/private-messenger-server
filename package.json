@@ -4,7 +4,10 @@
   "description": "The server for a private messanging service",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist",
+    "start": "forever -c 'nodemon --exitcrash --exec babel-node' src/app.js",
+    "serve": "node dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,15 @@
   "homepage": "https://github.com/CaelRowley/private-messenger-server#readme",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "babel-plugin-inline-dotenv": "^1.2.0",
+    "dotenv": "^6.2.0",
+    "forever": "^0.15.3",
+    "nodemon": "^1.18.9"
   }
 }

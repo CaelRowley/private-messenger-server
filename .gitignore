@@ -62,3 +62,6 @@ typings/
 
 # vscode config file
 .vscode
+
+# Babel build files
+dist/
