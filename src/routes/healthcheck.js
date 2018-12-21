@@ -1,5 +1,5 @@
-import express from "express";
-import * as routeController from "../controllers/healthcheck"
+import express from 'express';
+import * as routeController from '../controllers/healthcheck'
 
 const router = express.Router();
 
