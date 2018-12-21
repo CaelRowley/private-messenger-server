@@ -1,5 +1,5 @@
-const healthcheck = (req, res) => {
-  res.send('Health check!');
+const healthcheck = () => {
+  return ('Health check!');
 };
 
 export {

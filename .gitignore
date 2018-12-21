@@ -64,4 +64,4 @@ typings/
 .vscode
 
 # Babel build files
-dist/
+lib/

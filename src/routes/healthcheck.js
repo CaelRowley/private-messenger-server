@@ -4,7 +4,7 @@ import * as routeController from "../controllers/healthcheck"
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  routeController.healthcheck(req, res);
+  res.send(routeController.healthcheck());
 });
 
-export {router as healthcheckRouter};
+export { router as healthcheckRouter };
