@@ -10,12 +10,17 @@ const io = socketIO(server);
 app.use(healthcheckRouter);
 
 io.on('connection', socket => {
-  console.log('User connected')
+  console.log('Client connected');
+
+  socket.on('change color', (color) => {
+    console.log('Color Changed to: ', color);
+    io.sockets.emit('change color', color);
+  });
 
   socket.on('disconnect', () => {
-    console.log('user disconnected')
-  })
-})
+    console.log('Client disconnected');
+  });
+});
 
 server.listen(process.env.PORT, () => {
   console.log(`Server be jammin' on ${process.env.PORT}!`);
