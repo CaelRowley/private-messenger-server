@@ -12,9 +12,9 @@ app.use(healthcheckRouter);
 io.on('connection', socket => {
   console.log('Client connected');
 
-  socket.on('change color', (color) => {
-    console.log('Color Changed to: ', color);
-    io.sockets.emit('change color', color);
+  socket.on('emit message', (message) => {
+    console.log('Message to Send: ', message);
+    io.sockets.emit('emit message', message);
   });
 
   socket.on('disconnect', () => {
