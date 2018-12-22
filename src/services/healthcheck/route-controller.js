@@ -3,5 +3,5 @@ const healthcheck = () => {
 };
 
 export {
-  healthcheck,
+  healthcheck
 };

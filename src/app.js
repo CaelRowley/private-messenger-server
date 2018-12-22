@@ -1,5 +1,5 @@
 import express from 'express';
-import { healthcheckRouter } from './routes/healthcheck';
+import { healthcheckRouter } from './routes/healthcheck/router';
 import http from 'http';
 import socketIO from 'socket.io';
 
@@ -13,7 +13,7 @@ io.on('connection', socket => {
   console.log('Client connected');
 
   socket.on('emit message', (message) => {
-    console.log('Message to Send: ', message);
+    console.log(`Emitting message: "${message}" to all clients`);
     io.sockets.emit('emit message', message);
   });
 
