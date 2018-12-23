@@ -3,7 +3,7 @@ import * as routeController from '../../../src/services/healthcheck/route-servic
 
 const should = chai.should();
 
-describe('services: healthcheck test suite', () => {
+describe('Services: healthcheck', () => {
   context('routeController.healthcheck()', () => {
     it('should return "Health check!"', () => {
       routeController.healthcheck().should.equal('Health check!');
