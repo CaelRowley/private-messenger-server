@@ -1,13 +1,13 @@
 import express from 'express';
-import { healthcheckRouter } from './routes/healthcheck/router';
 import http from 'http';
 import socketIO from 'socket.io';
+import { addRouters } from './routes/app-router';
 
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-app.use(healthcheckRouter);
+addRouters(app);
 
 io.on('connection', socket => {
   console.log('Client connected');
@@ -23,5 +23,5 @@ io.on('connection', socket => {
 });
 
 server.listen(process.env.PORT, () => {
-  console.log(`Server be jammin' on ${process.env.PORT}!`);
+  console.log(`Server be jammin' on port ${process.env.PORT}!`);
 });

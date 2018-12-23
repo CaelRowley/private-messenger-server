@@ -1,5 +1,6 @@
 import chai from 'chai';
-import * as routeController from '../../../src/services/healthcheck/route-controller'
+import * as routeController from '../../../src/services/healthcheck/route-service';
+
 const should = chai.should();
 
 describe('services: healthcheck test suite', () => {
