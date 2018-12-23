@@ -1,5 +1,5 @@
-import { addDisconnectEvents } from './disconnect/events';
-import { addMessageEvents } from './message/events';
+import { addDisconnectEvents } from './connection/events';
+import { addMessageEvents } from './messages/events';
 
 const addSocketEvents = (io) => {
   io.on('connection', socket => {
