@@ -1,5 +1,5 @@
-import { addConnectionEvents } from './connection/events';
-import { addMessageEvents } from './messages/events';
+import addConnectionEvents from './connection/events';
+import addMessageEvents from './messages/events';
 
 export default (io) => {
   io.on('connection', (socket) => {

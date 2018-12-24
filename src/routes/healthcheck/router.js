@@ -1,10 +1,10 @@
 import express from 'express';
-import * as routeService from '../../services/healthcheck/route-service';
+import healthcheck from '../../services/healthcheck/route-service';
 
 const router = express.Router();
 
 router.get('/', (req, res) => {
-  res.send(routeService.healthcheck());
+  res.send(healthcheck());
 });
 
-export { router as healthcheckRouter };
+export default router;

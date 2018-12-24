@@ -15,4 +15,4 @@ server.listen(process.env.PORT, () => {
   console.log(`Server be jammin' on port ${process.env.PORT}!`);
 });
 
-export { app };
+export default app;

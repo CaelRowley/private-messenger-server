@@ -1,3 +1,1 @@
-export const healthcheck = () => {
-  return ('Health check!');
-};
+export default () => ('Health check!');
