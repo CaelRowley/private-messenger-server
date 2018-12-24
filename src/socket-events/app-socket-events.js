@@ -1,12 +1,10 @@
-import { addDisconnectEvents } from './connection/events';
+import { addConnectionEvents } from './connection/events';
 import { addMessageEvents } from './messages/events';
 
-const addSocketEvents = (io) => {
+export const addSocketEvents = (io) => {
   io.on('connection', socket => {
     console.log('Client connected');
-    addDisconnectEvents(socket);
+    addConnectionEvents(socket);
     addMessageEvents(io, socket);
   });
 };
-
-export { addSocketEvents };

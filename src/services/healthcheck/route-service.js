@@ -1,5 +1,3 @@
-const healthcheck = () => {
+export const healthcheck = () => {
   return ('Health check!');
 };
-
-export { healthcheck };
