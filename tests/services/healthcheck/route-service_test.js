@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars, no-undef */
-
-
 import chai from 'chai';
-import healthcheck from '../../../src/services/healthcheck/route-service';
+import { healthcheck } from '../../../src/services/healthcheck/route-service';
 
 const should = chai.should();
 const healthCheckResponse = 'Health check!';

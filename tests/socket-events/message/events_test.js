@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars, no-undef */
-
 import chai from 'chai';
 import socketIOClient from 'socket.io-client';
 import app from '../../../src/app';

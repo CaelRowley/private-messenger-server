@@ -1,5 +1,9 @@
 import healthcheckRouter from './healthcheck/router';
 
-export default (app) => {
+export const addRouters = (app) => {
   app.use(healthcheckRouter);
+};
+
+export default {
+  addRouters,
 };

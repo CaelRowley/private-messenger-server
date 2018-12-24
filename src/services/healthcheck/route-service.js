@@ -1,1 +1,5 @@
-export default () => ('Health check!');
+export const healthcheck = () => ('Health check!');
+
+export default {
+  healthcheck,
+};
