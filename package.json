@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix .",
     "start": "forever -c 'nodemon --exitcrash --exec babel-node' src/app.js",
     "serve": "node lib/src/app.js",
-    "test": "npm-run-all clean build test:mocha",
+    "test": "LOG_LEVEL=error npm-run-all clean build test:mocha",
     "test:mocha": "find ./lib/tests/* -name '*_test.js' | xargs mocha --exit -R spec"
   },
   "repository": {
@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/CaelRowley/private-messenger-server#readme",
   "dependencies": {
+    "app-root-path": "^2.1.0",
     "express": "^4.16.4",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "winston": "^3.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

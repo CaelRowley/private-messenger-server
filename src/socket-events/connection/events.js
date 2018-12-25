@@ -1,6 +1,8 @@
+import logger from '../../config/winston';
+
 export const addConnectionEvents = (socket) => {
   socket.on('disconnect', () => {
-    console.log('Client disconnected');
+    logger.debug('Client disconnected');
   });
 };
 
